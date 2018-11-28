@@ -16,5 +16,20 @@ Rails.application.routes.draw do
     resources :topics
   end
 
+  # Better way
+  resources :topics do
+    resources :comments
+  end
+
+
+  #BAD 
+  # resources :subs do
+  #   resources :topics do
+  #     resources :comments do
+  #       resources :likes
+  #     end
+  #   end
+  # end
+
 
 end
